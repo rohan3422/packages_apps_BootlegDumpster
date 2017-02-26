@@ -47,4 +47,8 @@
         android:summary="@string/brightness_icon_summary"
         android:defaultValue="true"/>
 
+        <Preference
+             android:key="qs_omnijaws"
+             android:fragment="com.bootleggers.dumpster.external.OmniJawsSettings"
+             android:title="@string/weather_title" />
 </PreferenceScreen>
