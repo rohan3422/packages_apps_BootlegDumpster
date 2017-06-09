@@ -28,6 +28,8 @@ import java.util.HashSet;
 import com.android.settings.Utils;
 import com.android.settings.SettingsPreferenceFragment;
 
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
+
 
 public class MiscSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
@@ -35,6 +37,11 @@ public class MiscSettings extends SettingsPreferenceFragment implements
     //Launch music player on headset connect - Wireless Compatibility
     private static final String HEADSET_CONNECT_PLAYER = "headset_connect_player";
     private ListPreference mLaunchPlayerHeadsetConnection;
+    
+    // Battery Low Color
+    private static final String TAG = "StatusbarBatteryStyle";
+    private static final String STATUS_BAR_BATTERY_SAVER_COLOR = "status_bar_battery_saver_color";
+    private ColorPickerPreference mBatterySaverColor;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -50,13 +57,22 @@ public class MiscSettings extends SettingsPreferenceFragment implements
         mLaunchPlayerHeadsetConnection.setValue(Integer.toString(mLaunchPlayerHeadsetConnectionValue));
         mLaunchPlayerHeadsetConnection.setSummary(mLaunchPlayerHeadsetConnection.getEntry());
         mLaunchPlayerHeadsetConnection.setOnPreferenceChangeListener(this);
+        
+        //Battery Low Color
+        int batterySaverColor = Settings.Secure.getInt(resolver,
+                Settings.Secure.STATUS_BAR_BATTERY_SAVER_COLOR, 0xfff4511e);
+        mBatterySaverColor = (ColorPickerPreference) findPreference("status_bar_battery_saver_color");
+        mBatterySaverColor.setNewPreviewColor(batterySaverColor);
+        mBatterySaverColor.setOnPreferenceChangeListener(this);
+
+        enableStatusBarBatteryDependents();
 
     }
 
     @Override
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
-
-        return false;
+    public boolean onPreferenceTreeClick(Preference preference) {
+        // If we didn't handle it, let preferences handle it.
+        return super.onPreferenceTreeClick(preference);
     }
     
     @Override
@@ -81,6 +97,17 @@ public class MiscSettings extends SettingsPreferenceFragment implements
                     mLaunchPlayerHeadsetConnectionValue, UserHandle.USER_CURRENT);
             return true;
         }
+        // Battery Low Color
+        if (preference.equals(mBatterySaverColor)) {
+            int color = ((Integer) newValue).intValue();
+            Settings.Secure.putInt(resolver,
+                    Settings.Secure.STATUS_BAR_BATTERY_SAVER_COLOR, color);
+            return true;
+        }
         return false;
+    }
+    
+    private void enableStatusBarBatteryDependents() {
+        mBatterySaverColor.setEnabled(true);
     }
 }
