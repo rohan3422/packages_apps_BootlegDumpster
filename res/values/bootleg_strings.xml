@@ -73,4 +73,7 @@
     <string name="swap_volume_buttons_summary">Change the order of volume buttons according of screen rotation</string>
     <string name="volume_keys_control_media_stream_title">Volume keys control media volume</string>
     <string name="volume_keys_control_media_stream_summary">The volume keys will control media volume instead of ringtone</string>
+
+    <!-- Features Strings - Lockscreen -->
+    <string name="double_tap_sleep_lockscreen">DT2S on lockscreen</string>
 </resources>
