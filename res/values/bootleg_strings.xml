@@ -79,4 +79,7 @@
     <string name="recents_clear_all_location_bottom_right">Bottom right</string>
     <string name="recents_clear_all_location_bottom_left">Bottom left</string>
     <string name="recents_clear_all_location_bottom_center">Bottom center</string>
+    
+    <!-- Volume Rocker related strings -->
+    <string name="swap_volume_buttons">Swap volume buttons rotation based</string>
 </resources>
