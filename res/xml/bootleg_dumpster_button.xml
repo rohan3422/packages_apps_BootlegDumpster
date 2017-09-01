@@ -21,11 +21,17 @@
     <PreferenceCategory
         android:key="volume_rocker_configs"
         android:title="@string/volume_rocker_title">
-            
+
         <com.bootleggers.dumpster.preferences.SystemSettingSwitchPreference
         android:key="swap_volume_buttons"
         android:title="@string/swap_volume_buttons"
         android:defaultValue="false" />
+
+        <com.bootleggers.dumpster.preferences.SystemSettingSwitchPreference
+        android:key="volume_keys_control_media_stream"
+        android:title="@string/volume_keys_control_media_stream_title"
+        android:summary="@string/volume_keys_control_media_stream_summary"
+        android:defaultValue="true" />
 
     </PreferenceCategory>
 
