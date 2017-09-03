@@ -87,6 +87,7 @@
     <string name="status_bar_quick_qs_pulldown_summary">Pulldown statusbar from right side to show QS panel</string>
 
     <!-- Features Strings - Miscellaneous -->
+    <string name="headset_title">Headset</string>
     <string name="headset_connect_player_title">Launch music app on headset connection</string>
     <string name="headset_connect_player_summary">Launch the default music app when headset is connected</string>
     <string name="headset_connect_player_disabled">Disabled</string>
@@ -98,4 +99,11 @@
     <string name="headset_title">Headset connection settings</string>
     <string name="toast_icon_title">App\'s icon in toast</string>
     <string name="toast_icon_summary">Display the app icon corresponding with the toast</string>
+
+    <!-- Features Strings - Gestures -->
+    <string name="torch_title">Torch</string>
+    <string name="torch_power_button_gesture_title">Screen off power button torch</string>
+    <string name="torch_power_button_gesture_none">Disabled</string>
+    <string name="torch_power_button_gesture_dt">Double tap power to toggle torch (will add a small delay to single tap)</string>
+    <string name="torch_power_button_gesture_lp">Long press power to toggle torch</string>
 </resources>
