@@ -30,4 +30,10 @@
         android:summary="@string/qs_footer_warnings_summary"
         android:defaultValue="true" />
 
+    <Preference
+            android:key="qs_rows_columns"
+            android:fragment="com.bootleggers.dumpster.external.QsRowsColumns"
+            android:title="@string/qs_rows_columns_title"
+            android:summary="@string/bootleg_external_summary"/>
+
 </PreferenceScreen>
