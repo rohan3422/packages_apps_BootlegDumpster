@@ -45,6 +45,9 @@ public class PowerMenuSettings extends SettingsPreferenceFragment
                 implements Preference.OnPreferenceChangeListener {
 
 
+    private PreferenceCategory mLedsCategory;
+    private Preference mChargingLeds;
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
@@ -52,8 +55,7 @@ public class PowerMenuSettings extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.bootleg_dumpster_power);
 
         final ContentResolver resolver = getActivity().getContentResolver();
-        final PreferenceScreen prefScreen = getPreferenceScreen();
-
+        final PreferenceScreen prefSet = getPreferenceScreen();
     }
 
     @Override
