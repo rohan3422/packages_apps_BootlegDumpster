@@ -142,6 +142,7 @@ public class NotificationSettings extends SettingsPreferenceFragment implements
                     Settings.System.BATTERY_LIGHT_LOW_BLINKING, value ? 1 : 0,
                     UserHandle.USER_CURRENT);
             mLowBatteryBlinking.setChecked(value);
+            return true;
         }
         return false;
     }
