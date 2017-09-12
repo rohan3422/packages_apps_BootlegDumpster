@@ -303,6 +303,14 @@
     <string name="slim_blacklist_apps_summary">Apps to not show in the panel</string>
     <string name="slim_blacklist_add_apps_title">Add app</string>
     <string name="slim_blacklist_add_apps_summary">Tap here to add, tap on added app to remove it</string>
+    <!-- Immersive Recents -->
+    <string name="immersive_recents_title">Immersive Recents</string>
+    <string name="immersive_recents_summary">Change the view of the recents screen</string>
+    <string name="immersive_recents_dialog_title">Select recents view</string>
+    <string name="immersive_recents_default">Default</string>
+    <string name="immersive_recents_fullscreen">Fullscreen</string>
+    <string name="immersive_recents_statusbar">Statusbar only</string>
+    <string name="immersive_recents_navbar">Navbar only</string>
 
     <!-- Features Strings - Navbar -->
     <!-- DUI -->
