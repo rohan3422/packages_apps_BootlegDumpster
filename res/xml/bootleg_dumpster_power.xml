@@ -17,5 +17,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/powermenu_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+     
+    <Preference
+        android:key="powermenu"
+        android:fragment="com.bootleggers.dumpster.external.PowerMenu"
+        android:title="@string/powermenu_title" />
 
 </PreferenceScreen>
