@@ -117,6 +117,8 @@
     <string name="status_bar_battery_saver_color_summary">Note: If battery saver already enabled, for new color be effective, disbale and renable battery saver!</string>
     <string name="wake_when_plugged_or_unplugged_title">Wake on plug</string>
     <string name="wake_when_plugged_or_unplugged_summary">Turn the screen on when connecting or disconnecting a power source</string>
+    <string name="vibration_on_charge_state_changed_title">Vibrate on plug</string>
+    <string name="vibration_on_charge_state_changed_summary">Vibrate when connecting or disconnecting a power source</string>
 
     <!-- Features Strings - Gestures -->
     <string name="torch_title">Torch</string>
