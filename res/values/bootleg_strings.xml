@@ -119,6 +119,7 @@
     <string name="wake_when_plugged_or_unplugged_summary">Turn the screen on when connecting or disconnecting a power source</string>
     <string name="vibration_on_charge_state_changed_title">Vibrate on plug</string>
     <string name="vibration_on_charge_state_changed_summary">Vibrate when connecting or disconnecting a power source</string>
+    <string name="app_ops_settings">AppOps</string>
 
     <!-- Features Strings - Gestures -->
     <string name="torch_title">Torch</string>
