@@ -48,6 +48,12 @@
         android:defaultValue="true"/>
 
     <com.bootleggers.dumpster.preferences.SystemSettingSwitchPreference
+        android:key="music_tile_title"
+        android:title="@string/qs_music_tile_track_optional_title"
+        android:summary="@string/qs_music_tile_track_optional_summary"
+        android:defaultValue="false"/>
+
+    <com.bootleggers.dumpster.preferences.SystemSettingSwitchPreference
         android:key="qs_quickbar_scroll_enabled"
         android:title="@string/qqs_scroll_title"
         android:summary="@string/qqs_scroll_summary"
