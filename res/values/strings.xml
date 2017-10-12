@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2016-20..
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- General -->
+    <string name="wolvesden_summary_title">Customize your device</string>
+
+    <!-- Tabs -->
+    <string name="system_category">System</string>
+    <string name="lockscreen_category">Lock screen</string>
+    <string name="heads_up_category">Heads up</string>
+    <string name="statusbar_category">Status bar</string>
+    <string name="navigation_category">Navigation</string>
+    <string name="multitasking_category">Multi-Tasking</string>
+    <string name="statusbar_notifications_category">Status bar notifications</string>
+
+    <!-- Fragments -->
+    <string name="headset_title">Headset</string>
+    <string name="button_title">Buttons</string>
+    <string name="quicksettings_title">Quick settings</string>
+    <string name="torch_title">Torch</string>
+    <string name="battery_title">Battery settings</string>
+    <string name="batterybar_title">Battery bar</string>
+    <string name="leds_title">Lights</string>
+    <string name="battery_light_settings">Battery charging light</string>
+    <string name="network_traffic_title">Network traffic</string>
+    <string name="notification_light_settings">Notifications light</string>
+    <string name="powermenu_title">Power menu</string>
+    <string name="navbar_title">Navbar</string>
+    <string name="notifications_title">Notifications</string>
+    <string name="various_system_title">Various</string>
+    <string name="various_lockscreen_title">Various</string>
+    <string name="various_statusbar_title">Various</string>
+    <string name="various_navigation_title">Various</string>
+    <string name="recent_settings_title">Recents</string>
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Color Picker</string>
+    <string name="press_color_to_apply">Press on color below to apply</string>
+    <string name="arrow_right">→</string>
+    <string name="arrow_down">↓</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">#ff000000</string>
+    <string name="set">Set</string>
+    <string name="color_default">Default</string>
+
+    <string name="status_bar_quick_qs_pulldown">Quick Pulldown</string>
+    <string name="status_bar_quick_qs_pulldown_summary">Pulldown statusbar from right side to show QS panel</string>
+
+    <string name="double_tap_sleep_navbar">Double tap to sleep on navbar</string>
+    <string name="double_tap_sleep_lockscreen">Double tap to sleep on lockscreen</string>
+    <string name="double_tap_sleep_gesture_title">Double tap status bar to sleep</string>
+
+    <string name="swap_volume_buttons">Swap volume buttons rotation based</string>
+    <string name="volume_keys_control_media_stream_title">Volume keys control media volume</string>
+    <string name="volume_keys_control_media_stream_summary">Volume panel will show media volume slider by default</string>
+    <string name="volume_rocker_music_controls_title">Playback control</string>
+    <string name="volume_rocker_music_controls_summary">When the screen is off, long-pressing the volume keys will seek music tracks</string>
+
+    <!-- Media art -->
+    <string name="media_art_title">Media cover art</string>
+    <string name="media_art_summary">Enable media cover art on the lockscreen</string>
+
+    <!-- Launch music player when headset is connected -->
+    <string name="headset_connect_player_title">Launch music app on headset connection</string>
+    <string name="headset_connect_player_disabled">Disabled</string>
+    <string name="headset_connect_player_wired">When wired headset is plugged in</string>
+    <string name="headset_connect_player_bt_no_carkit">When BT headset (no carkit) is plugged in</string>
+    <string name="headset_connect_player_bt">When BT headset is plugged in</string>
+    <string name="headset_connect_player_both_no_carkit">When wired or BT headset (no carkit) is plugged in</string>
+    <string name="headset_connect_player_both">When wired or BT headset is plugged in</string>
+
+    <!-- Headset ringtone audio focus -->
+    <string name="ringtone_focus_mode_title">Where to play ringtones from</string>
+    <string name="ringtone_focus_mode_dynamic">From headset if connected and playing music</string>
+    <string name="ringtone_focus_mode_stock">"From speakerphone (aosp default)"</string>
+
+    <!-- Toast icon -->
+    <string name="toast_icon_title">App\'s icon in toast</string>
+    <string name="toast_icon_summary">Display the app icon corresponding with the toast</string>
+
+    <!-- Torch Power button gestures -->
+    <string name="torch_power_button_gesture_title">Screen off power button torch</string>
+    <string name="torch_power_button_gesture_none">Disabled</string>
+    <string name="torch_power_button_gesture_dt">Double tap power to toggle torch (will add a small delay to single tap)</string>
+    <string name="torch_power_button_gesture_lp">Long press power to toggle torch</string>
+
+    <!-- Battery saver color settings -->
+    <string name="status_bar_battery_saver_color_title">Statusbar battery saver color</string>
+    <string name="status_bar_battery_saver_color_summary">Note: If battery saver already enabled, for new color be effective, disbale and renable battery saver!</string>
+
+    <!-- QS footer warnings -->
+    <string name="qs_footer_warnings_title">QS footer warnings</string>
+    <string name="qs_footer_warnings_summary">Display a warning at bottom of QS panel when network is monitored by external apps or vpn</string>
+
+    <!-- QS rows and columns -->
+    <string name="qs_rows_columns_title">QS rows and columns</string>
+    <string name="qs_rows_portrait_title">Tiles rows on portrait</string>
+    <string name="qs_rows_landscape_title">Tiles rows on landscape</string>
+    <string name="qs_columns_portrait_title">Tiles columns on portrait</string>
+    <string name="qs_columns_landscape_title">Tiles columns on landscape</string>
+    <string name="qs_tile_title_visibility_title">Show tiles title</string>
+    <string name="qs_small_tiles_title">Small QS tiles</string>
+
+    <!-- Battery light -->
+    <string name="battery_light_allow_on_dnd_title">Battery light in Do Not Disturb mode</string>
+    <string name="battery_light_low_blinking_title">Blinking light on low battery</string>
+    <string name="battery_light_cat">Battery light color when charging</string>
+    <string name="battery_light_low_color">Low battery</string>
+    <string name="battery_light_medium_color">Medium battery</string>
+    <string name="battery_light_full_color">Almost full battery</string>
+    <string name="battery_light_reallyfull_color">Full (100) battery</string>
+
+    <!-- Statusbar net monitor -->
+    <string name="network_traffic_state_title">Show net activity in statusbar</string>
+    <string name="network_traffic_autohide_threshold_title">Net activity autohide threshold (KB/s)</string>
+
+    <!-- Power menu on secure lockscreen -->
+    <string name="lockscreen_power_menu_disabled_title">No power menu when locked</string>
+    <string name="lockscreen_power_menu_disabled_summary">Disable power menu on secure lockscreen</string>
+
+    <!-- Power plug events -->
+    <string name="wake_when_plugged_or_unplugged_title">Wake on plug</string>
+    <string name="wake_when_plugged_or_unplugged_summary">Turn the screen on when connecting or disconnecting a power source</string>
+    <string name="vibration_on_charge_state_changed_title">Vibrate on plug</string>
+    <string name="vibration_on_charge_state_changed_summary">Vibrate when connecting or disconnecting a power source</string>
+
+    <!-- Brightness icon-->
+    <string name="brightness_icon_title">Brightness icon </string>
+    <string name="brightness_icon_summary">Show a brightness icon to the left of the brighness slider to adjust auto-brightness</string>
+
+    <!-- Power Menu -->
+    <string name="powermenu_screenshot">Screenshot</string>
+    <string name="powermenu_screenrecord">Screenrecord</string>
+    <string name="powermenu_power">Power</string>
+    <string name="powermenu_restart">Restart</string>
+    <string name="powermenu_restart_recovery">Advanced restart</string>
+    <string name="powermenu_airplane">Airplane</string>
+    <string name="powermenu_settings">Settings</string>
+    <string name="powermenu_lockdown">Lock Down</string>
+    <string name="powermenu_soundpanel">Sound Panel</string>
+    <string name="powermenu_users">Users</string>
+
+    <!-- Lockscreen battery info indicator  -->
+    <string name="lockscreen_battery_info_title">Lockscreen battery info</string>
+    <string name="lockscreen_battery_info_summary">Display negotiated charger max current-voltage and battery temperature on lockscreen while charging</string>
+
+    <!-- Statusbar Tuner -->
+    <string name="statusbar_items_title">Statusbar items</string>
+
+    <!-- Power notification controls -->
+    <string name="power_notification_title">Power notification controls</string>
+
+    <!-- Volume down enter do not disturb -->
+    <string name="volbtn_down_zen_title">Volume down for do not disturb</string>
+    <string name="volbtn_down_zen_summary">allow volume down to enter do not disturb mode</string>
+    <!-- Volume up exit do not disturb -->
+    <string name="volbtn_up_zen_title">Volume up in do not disturb</string>
+    <string name="volbtn_up_zen_summary">allow volume up to exit do not disturb mode</string>
+
+    <!-- Lockscreen icons -->
+    <string name="lockscreen_tuner_title">Lockscreen shortcuts</string>
+
+    <!-- Navbar tuner -->
+    <string name="navbar_tuner_title">Navbar buttons</string>
+
+    <!-- Heads up -->
+    <string name="heads_up_notifications">Heads up</string>
+    <string name="summary_heads_up_enabled">Pop-up notifications are enabled</string>
+    <string name="summary_heads_up_disabled">Pop-up notifications are disabled</string>
+    <string name="add_heads_up_package">Add app</string>
+    <string name="add_heads_up_stoplist_summary">Disable heads up notifications in these applications</string>
+    <string name="add_heads_up_blacklist_summary">Disable heads up from these applications</string>
+    <string name="heads_up_stoplist_title">Stoplist</string>
+    <string name="heads_up_blacklist_title">Blacklist</string>
+    <string name="profile_choose_app">Choose app</string>
+    <string name="dialog_delete_title">Delete</string>
+    <string name="dialog_delete_message">Remove selected item?</string>
+
+    <!-- Heads up timeout -->
+    <string name="heads_up_time_out_title">Time out</string>
+    <string name="heads_up_time_out_summary">Peeking notifications will show for <xliff:g id="number">%d</xliff:g> seconds</string>
+    <string name="heads_up_time_out_2sec">2 seconds</string>
+    <string name="heads_up_time_out_4sec">4 seconds</string>
+    <string name="heads_up_time_out_5sec">5 seconds</string>
+    <string name="heads_up_time_out_6sec">6 seconds</string>
+    <string name="heads_up_time_out_8sec">8 seconds</string>
+    <string name="heads_up_time_out_10sec">10 seconds</string>
+
+    <!-- Heads up snooze -->
+    <string name="heads_up_snooze_title">Snooze timer</string>
+    <string name="heads_up_snooze_summary_one_minute">Swiping up on peeking notifications will snooze heads up from that application for 1 minute</string>
+    <string name="heads_up_snooze_summary">Swiping up on peeking notifications will snooze heads up from that application for <xliff:g id="number">%d</xliff:g> minutes</string>
+    <string name="heads_up_snooze_disabled_summary">Snooze timer is disabled</string>
+    <string name="heads_up_snooze_1min">1 minute</string>
+    <string name="heads_up_snooze_5min">5 minutes</string>
+    <string name="heads_up_snooze_10min">10 minutes</string>
+    <string name="heads_up_snooze_15min">15 minutes</string>
+    <string name="heads_up_snooze_20min">20 minutes</string>
+
+    <!-- Gesture Anywhere -->
+    <string name="gesture_anywhere_title">Gesture Anywhere</string>
+    <string name="gesture_anywhere_enabled_title">Gesture Anywhere</string>
+    <string name="gesture_anywhere_enabled_summary">Enable the Gesture Anywhere feature</string>
+    <string name="gesture_anywhere_position_title">Location</string>
+    <string name="gesture_anywhere_position_left">Left edge</string>
+    <string name="gesture_anywhere_position_right">Right edge</string>
+    <string name="gesture_anywhere_gestures_title">Gestures</string>
+    <string name="gesture_anywhere_gestures_summary">Add, remove, and edit gestures</string>
+    <!-- Label, button used to add a gesture -->
+    <string name="ga_button_add">Add gesture</string>
+    <!-- Label, button used to reload all gestures -->
+    <string name="ga_button_reload">Reload</string>
+    <!-- Label, button used to cancel the operation of adding a gesture -->
+    <string name="ga_button_discard">Discard</string>
+    <!-- Label, button used to save a gesture newly created -->
+    <string name="ga_button_done">Done</string>
+    <!-- Label, prompt asking the user to enter the name of the gesture -->
+    <string name="ga_prompt_gesture_name">Name</string>
+    <!-- Error message, informs the user he needs to enter a name before saving a gesture -->
+    <string name="ga_error_missing_name">You must enter a name</string>
+    <!-- success message, tells the user where the gesture was saved -->
+    <string name="ga_save_success">Gesture saved in %s</string>
+    <!-- Buttons in Rename gesture dialog box -->
+    <string name="ga_rename_action">OK</string>
+    <!-- Buttons in Rename gesture dialog box -->
+    <string name="ga_cancel_action">Cancel</string>
+    <!-- Message displayed when the user opens the gestures settings screen -->
+    <string name="ga_gestures_loading">Loading gestures...</string>
+    <!-- Message displayed when the user has no gestures -->
+    <string name="ga_gestures_empty">No gestures</string>
+    <!-- Title of the screen used to view/manage gestures -->
+    <string name="ga_gestures_activity">Gestures</string>
+    <!-- Noun, menu item used to edit a gesture -->
+    <string name="ga_gestures_edit">Edit</string>
+    <!-- Noun, menu item used to remove a gesture -->
+    <string name="ga_gestures_delete">Delete</string>
+    <!-- Message displayed when a gesture is successfully deleted -->
+    <string name="ga_gestures_delete_success">Gesture deleted</string>
+    <!-- Title of dialog box -->
+    <string name="ga_gestures_rename_title">Rename gesture</string>
+    <!-- Label of gesture name field in Rename gesture dialog box -->
+    <string name="ga_gestures_rename_label">Gesture name</string>
+    <!-- Message, displayed when the sdcard cannot be found, 1st parameter is the name of the file that stores the gestures.  CHAR LIMIT=80 -->
+    <string name="ga_gestures_error_loading">Could not load %s. Make sure you have storage available.</string>
+    <string name="trigger_category">Trigger region</string>
+    <string name="trigger_width_title">Trigger width</string>
+    <string name="trigger_width_summary">Adjust the width of the trigger area</string>
+    <string name="trigger_top_title">Trigger position</string>
+    <string name="trigger_top_summary">Adjust the vertical postion of the trigger area</string>
+    <string name="trigger_bottom_title">Trigger height</string>
+    <string name="trigger_bottom_summary">Adjust the height of the trigger area</string>
+    <string name="picker_activities">Activities</string>
+    <string name="select_custom_app_title">Select custom app</string>
+    <string name="select_custom_activity_title">Select custom activity</string>
+    <string name="profile_applist_title">Applications</string>
+
+    <string name="gesture_anywhere_0">0px</string>
+    <string name="gesture_anywhere_1">1px</string>
+    <string name="gesture_anywhere_5">5px</string>
+    <string name="gesture_anywhere_10">10px</string>
+    <string name="gesture_anywhere_15">15px</string>
+    <string name="gesture_anywhere_20">20px</string>
+    <string name="gesture_anywhere_25">25px</string>
+    <string name="gesture_anywhere_30">30px</string>
+    <string name="gesture_anywhere_35">35px</string>
+    <string name="gesture_anywhere_40">40px</string>
+    <string name="gesture_anywhere_45">45px</string>
+    <string name="gesture_anywhere_50">50px</string>
+    <string name="gesture_anywhere_55">55px</string>
+    <string name="gesture_anywhere_60">60px</string>
+    <string name="gesture_anywhere_65">65px</string>
+    <string name="gesture_anywhere_70">70px</string>
+    <string name="gesture_anywhere_75">75px</string>
+    <string name="gesture_anywhere_80">80px</string>
+    <string name="gesture_anywhere_85">85px</string>
+    <string name="gesture_anywhere_90">90px</string>
+    <string name="gesture_anywhere_95">95px</string>
+    <string name="gesture_anywhere_100">100px</string>
+    <string name="gesture_anywhere_4">4px</string>
+    <string name="gesture_anywhere_8">8px</string>
+    <string name="gesture_anywhere_12">12px</string>
+    <string name="gesture_anywhere_16">16px</string>
+    <string name="gesture_anywhere_24">24px</string>
+    <string name="gesture_anywhere_28">28px</string>
+    <string name="gesture_anywhere_32">32px</string>
+    <string name="gesture_anywhere_36">36px</string>
+    <string name="gesture_anywhere_44">44px</string>
+    <string name="gesture_anywhere_48">48px</string>
+    <string name="gesture_anywhere_52">52px</string>
+    <string name="gesture_anywhere_56">56px</string>
+    <string name="gesture_anywhere_64">64px</string>
+    <string name="gesture_anywhere_68">68px</string>
+
+    <!-- Incall Home button behavior-->
+    <string name="allow_incall_home_title">Home button when ringing</string>
+    <string name="allow_incall_home_summary">Allow to use Home button when device is ringing</string>
+
+    <!-- The volume key answer -->
+    <string name="volume_answer_call_title">Volume keys answer</string>
+    <string name="volume_answer_call_summary">Answer the call when volume keys pressed</string>
+
+    <!-- Battery Bar -->
+    <string name="battery_icon">Battery icon style</string>
+    <string name="battery_not_title">Battery icon in notifications</string>
+    <string name="battery_not_summary">Battery icon will show up where the clear all button shows up</string>
+    <string name="battery_bar_title">Battery Bar</string>
+    <string name="battery_bar_location">Battery bar location</string>
+    <string name="battery_bar_color">Battery bar color</string>
+    <string name="battery_bar_charging_color">Battery bar charging color</string>
+    <string name="battery_bar_battery_low_color">Battery bar low battery color</string>
+    <string name="battery_bar_style_title">Battery bar style</string>
+    <string name="battery_bar_thickness_title">Battery bar thickness</string>
+    <string name="battery_bar_animate_title">Charging animation</string>
+    <string name="battery_bar_animate_summary">The charging animation may result in a poor user experience. Enable at your own discretion.</string>
+    <string name="battery_bar_hide">Hide</string>
+    <string name="battery_bar_statusbar">Statusbar</string>
+    <string name="battery_bar_topnav">Top of navbar</string>
+    <string name="battery_bar_bottomnav">Bottom of navbar</string>
+    <string name="battery_bar_reg">Regular</string>
+    <string name="battery_bar_center">Center-mirrored</string>
+    <string name="battery_bar_reversed">Reversed</string>
+    <string name="battery_bar_use_gradient_color">Use gradient color</string>
+    <string name="battery_bar_gradient_color_summary">Use gradient color as a scale for the battery level</string>
+    <string name="battery_bar_high_color">High level color"</string>
+    <string name="battery_bar_low_color">Low level color"</string>
+
+    <!-- Recents -->
+    <string name="recents_icon_pack_title">Icon Pack</string>
+    <string name="recents_icon_pack_summary">Apply a custom icon pack for Recents panel</string>
+    <string name="no_iconpacks_summary">No icon packs installed</string>
+    <string name="dialog_pick_iconpack_title">Pick icon pack</string>
+    <string name="default_iconpack_title">Default icons</string>
+
+    <!-- Navbar Animation -->
+    <string name="pixel_navbar_anim_title">Pixel navbar animation</string>
+    <string name="pixel_navbar_anim_summary">Requires a config change(display size, navbar position, reboot) themes may overwrite</string>
+
+    <!-- Toggle navigation bar -->
+    <string name="navigation_bar_enabled_title">Enable navigation bar</string>
+
+    <!-- OmniJaws -->
+    <string name="weather_title">Weather</string>
+    <string name="weather_config_title">Service settings</string>
+    <string name="weather_config_summary"></string>
+    <string name="header_weather_title">Header view weather</string>
+    <string name="header_weather_summary">Enable notification panel header weather display</string>
+    <string name="weather_icon_pack_title">Condition icon pack</string>
+    <string name="weather_icon_pack_note">Note\u003a you can install new icon packs from play store by searching for \"Chronus icons\"</string>
+
+    <!-- Lockscreen weather -->
+    <string name="lockscreen_weather_title">Weather</string>
+    <string name="weather_cat_options_title">Weather options</string>
+    <string name="weather_cat_notifications_title">Notifications</string>
+    <string name="weather_cat_settings_title">OmniJaws Weather</string>
+    <string name="weather_show_weather_title">Show weather</string>
+    <string name="weather_show_weather_summary">Display weather on lockscreen</string>
+    <string name="weather_show_location_title">Show location</string>
+    <string name="weather_show_location_summary">Display weather location</string>
+    <string name="hidden_title">Hidden</string>
+    <string name="weather_hide_panel_title">Hide weather panel</string>
+    <string name="weather_hide_panel_dlg_title">Choose when the weather panel should be hidden</string>
+    <string name="weather_hide_panel_auto_title">Auto</string>
+    <string name="weather_hide_panel_custom_title">Custom</string>
+    <string name="weather_hide_panel_never_title">Never</string>
+    <string name="weather_hide_panel_auto_summary">The weather panel will be hidden when the visible notifications will reach the maximum allowed notifications on the lock screen</string>
+    <string name="weather_hide_panel_custom_summary">The weather panel will be hidden when the visible notifications will reach the chosen number of notifications</string>
+    <string name="weather_hide_panel_never_summary">The weather panel won\`t be hidden</string>
+    <string name="weather_number_of_notifications_title">Number of notifications</string>
+    <string name="weather_settings_options_title">Location settings</string>
+    <string name="weather_settings_summary">Choose location and other settings</string>
+
+    <!-- Statusbar ticker -->
+    <string name="ticker_mode_title">Statusbar notification ticker</string>
+    <string name="ticker_disabled">Disabled</string>
+    <string name="ticker_enabled">Notification ticker</string>
+    <string name="ticker_media_enabled">Notification and music ticker</string>
+
+    <!-- Validus statusbar logo -->
+    <string name="status_bar_logo_title">Validus logo</string>
+    <string name="status_bar_logo_summary">Enable to show Validus logo on statusbar</string>
+
+</resources>
