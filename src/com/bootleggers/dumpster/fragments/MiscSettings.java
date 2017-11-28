@@ -27,6 +27,7 @@ import java.util.HashSet;
 
 import com.android.settings.Utils;
 import com.android.settings.SettingsPreferenceFragment;
+import android.provider.Settings.SettingNotFoundException;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
@@ -44,8 +45,8 @@ public class MiscSettings extends SettingsPreferenceFragment implements
     private ColorPickerPreference mBatterySaverColor;
 
     @Override
-    public void onCreate(Bundle icicle) {
-        super.onCreate(icicle);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.bootleg_dumpster_misc);
         
