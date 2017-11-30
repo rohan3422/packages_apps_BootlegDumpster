@@ -67,7 +67,13 @@
         settings:units="%"
         android:persistent="false" />
 
-    <!--<com.bootleggers.dumpster.preferences.SecureSettingSwitchPreference
+    <com.bootleggers.dumpster.preferences.SecureSettingSwitchPreference
+        android:key="smartbar_doubletap_sleep"
+        android:title="@string/smartbar_double_tap_sleep_title"
+        android:summary="@string/smartbar_double_tap_sleep_summary"
+        android:defaultValue="true" />
+
+    <!--<com.gzr.wolvesden.preference.SecureSettingSwitchPreference
         android:key="one_handed_mode_ui"
         android:title="@string/one_handed_mode_title"
         android:summary="@string/one_handed_mode_summary"
