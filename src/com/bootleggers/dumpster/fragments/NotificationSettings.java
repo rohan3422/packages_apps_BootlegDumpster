@@ -21,15 +21,18 @@ import android.support.annotation.NonNull;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.SettingsPreferenceFragment;
+import com.bootleggers.dumpster.preferences.SystemSettingSwitchPreference;
 
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NotificationSettings extends SettingsPreferenceFragment {
+public class NotificationSettings extends SettingsPreferenceFragment implements
+        Preference.OnPreferenceChangeListener {
 
     private PreferenceCategory mLedsCategory;
     private Preference mChargingLeds;
+    private SystemSettingSwitchPreference mLowBatteryBlinking;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -48,6 +51,20 @@ public class NotificationSettings extends SettingsPreferenceFragment {
           if (mChargingLeds == null) {
             prefSet.removePreference(mLedsCategory);
         }
+        mLowBatteryBlinking = (SystemSettingSwitchPreference)prefSet.findPreference("battery_light_low_blinking");
+        if (getResources().getBoolean(
+                        com.android.internal.R.bool.config_ledCanPulse)) {
+            mLowBatteryBlinking.setChecked(Settings.System.getIntForUser(getContentResolver(),
+                            Settings.System.BATTERY_LIGHT_LOW_BLINKING, 0, UserHandle.USER_CURRENT) == 1);
+            mLowBatteryBlinking.setOnPreferenceChangeListener(this);
+        } else {
+            prefSet.removePreference(mLowBatteryBlinking);
+        }
+
+    }
+    
+    public boolean onPreferenceChange(Preference preference, Object value) {
+         return true;
     }
 
     @Override
