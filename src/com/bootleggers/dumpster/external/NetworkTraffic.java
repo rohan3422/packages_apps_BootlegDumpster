@@ -34,8 +34,8 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 
-import com.gzr.wolvesden.preference.CustomSeekBarPreference;
-import com.gzr.wolvesden.preference.SystemSettingSwitchPreference;
+import com.bootleggers.dumpster.preferences.CustomSeekBarPreference;
+import com.bootleggers.dumpster.preferences.SystemSettingSwitchPreference;
 
 public class NetworkTraffic extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {

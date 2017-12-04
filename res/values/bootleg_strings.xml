@@ -25,7 +25,7 @@
     <string name="lockscreen_settings_summary">Change layout and features on your LS</string>
 
     <string name="misc_title">Miscellaneous</string>
-    <string name="misc_settings_summary">Some random stuff that doens\'t go in other options</string>
+    <string name="misc_settings_summary">Some random stuff that doesn\'t go in other options</string>
 
     <string name="navbar_title">Navbar features</string>
     <string name="navbar_settings_summary">Teach your navbar some newer tricks</string>
@@ -56,7 +56,9 @@
     <string name="save">Save</string>
     <string name="obviousum01">Um, i think it\'s kinda obvious</string>
     <string name="obviousum02">And the title explains it all</string>
-    <string name="obviousum03">Welp, i shouln't explain it</string>
+    <string name="obviousum03">Welp, i shouldn\'t explain it</string>
+    <string name="bootleg_external_summary">Customize it more on this submenu</string>
+    <string name="bootleg_advancedopt_title">Advanced options</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
@@ -86,13 +88,14 @@
     <string name="lockscreen_battery_info_title">Lockscreen battery info</string>
     <string name="lockscreen_battery_info_summary">Display negotiated charger max current-voltage and battery temperature on lockscreen while charging</string>
     <string name="lockscreen_tuner_title">Lockscreen shortcuts</string>
+    <string name="lockscreen_tuner_summary">Change the bottom shortcuts on the LS</string>
 
     <!-- Features Strings - QuickSettings -->
     <string name="status_bar_quick_qs_pulldown">Quick Pulldown</string>
     <string name="status_bar_quick_qs_pulldown_summary">Pulldown statusbar from right side to show QS panel</string>
     <string name="qs_footer_warnings_title">QS footer warnings</string>
     <string name="qs_footer_warnings_summary">Display a warning at bottom of QS panel when network is monitored by external apps or vpn</string>
-    <string name="quicksettings_title">Quick settings</string>
+    <!-- <string name="quicksettings_title">Quick settings</string> -->
     <string name="qs_rows_columns_title">QS rows and columns</string>
     <string name="qs_rows_portrait_title">Tiles rows on portrait</string>
     <string name="qs_rows_landscape_title">Tiles rows on landscape</string>
@@ -103,7 +106,7 @@
     <string name="brightness_icon_summary">Show a brightness icon to the left of the brighness slider to adjust auto-brightness</string>
 
     <!-- Features Strings - Miscellaneous -->
-    <string name="headset_title">Headset</string>
+    <!--<string name="headset_title">Headset</string> -->
     <string name="headset_connect_player_title">Launch music app on headset connection</string>
     <string name="headset_connect_player_summary">Launch the default music app when headset is connected</string>
     <string name="headset_connect_player_disabled">Disabled</string>
@@ -139,11 +142,13 @@
     <string name="network_traffic_title">Network traffic</string>
     <string name="network_traffic_state_title">Show net activity in statusbar</string>
     <string name="network_traffic_autohide_threshold_title">Net activity autohide threshold (KB/s)</string>
-    <string name="statusbar_items_title">Statusbar items</string> 
-    
+    <string name="statusbar_items_title">Status bar icons</string>
+    <string name="statusbar_items_summary">Set which icons should appear on the status bar</string>
+
     <!-- Features Strings - Notifications -->
     <string name="light_category">Lights</string>
     <string name="battery_light_settings">Battery charging light</string>
+    <string name="battery_light_settings_summary">Enable and configure how the LED should work</string>
     <string name="battery_light_enable">Battery light</string>
     <string name="battery_light_allow_on_dnd_title">Battery light in Do Not Disturb mode</string>
     <string name="battery_light_low_blinking_title">Blinking light on low battery</string>
@@ -152,8 +157,10 @@
     <string name="battery_light_medium_color">Medium battery</string>
     <string name="battery_light_full_color">Almost full battery</string>
     <string name="battery_light_reallyfull_color">Full (100) battery</string>
-    <string name="notification_light_settings">Notifications light</string>
+    <string name="notification_light_settings">LED on Apps</string>
+    <string name="notification_light_settings_summary">Enable which apps can use the LED</string>
     <string name="heads_up_notifications">Heads up</string>
+
     <string name="summary_heads_up_enabled">Pop-up notifications are enabled</string>
     <string name="summary_heads_up_disabled">Pop-up notifications are disabled</string>
     <string name="add_heads_up_package">Add app</string>
@@ -162,9 +169,10 @@
     <string name="profile_choose_app">Choose app</string>
     <string name="dialog_delete_title">Delete</string>
     <string name="dialog_delete_message">Remove selected item?</string>
-    
+
     <!-- Features Strings - Power Menu -->
-    <string name="powermenu_title">Power menu</string>
+    <string name="powermenu_optitle">Select Options</string>
+    <string name="powermenu_optsummary">Check which options should appear on the power menu</string>
     <string name="powermenu_screenshot">Screenshot</string>
     <string name="powermenu_power">Power</string>
     <string name="powermenu_restart">Restart</string>

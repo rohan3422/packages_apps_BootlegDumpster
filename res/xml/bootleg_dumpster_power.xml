@@ -21,6 +21,7 @@
     <Preference
         android:key="powermenu"
         android:fragment="com.bootleggers.dumpster.external.PowerMenu"
-        android:title="@string/powermenu_title" />
+        android:title="@string/powermenu_optitle"
+        android:summary="@string/powermenu_optsummary" />
 
 </PreferenceScreen>
