@@ -54,4 +54,23 @@
 
      </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/gesture_anywhere_title"
+        android:key="gestures_anywhere_category">
+
+    <SwitchPreference
+        android:key="gesture_anywhere_enabled"
+        android:title="@string/gesture_anywhere_enabled_title"
+        android:summary="@string/gesture_anywhere_enabled_summary"
+        android:defaultValue="false" />
+
+    <Preference
+        android:key="gesture_anywhere_adv"
+        android:title="@string/bootleg_advancedopt_title"
+        android:summary="@string/bootleg_external_summary"
+        android:fragment="com.bootleggers.dumpster.gestureanywhere.GestureAnywhereSettings"
+        android:dependency="gesture_anywhere_enabled" />
+
+     </PreferenceCategory>
+
 </PreferenceScreen>

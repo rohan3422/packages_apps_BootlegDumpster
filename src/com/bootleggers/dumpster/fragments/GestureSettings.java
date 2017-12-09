@@ -25,11 +25,15 @@ import com.bootleggers.dumpster.external.HAFRAppChooserDialog;
 public class GestureSettings extends SettingsPreferenceFragment implements 
     Preference.OnPreferenceChangeListener {
 
+    private static final String KEY_ENABLED = "gesture_anywhere_enabled";
+
     private CustomSeekBarPreference mCarbonGestureFingers;
     private ListPreference mCarbonGestureRight;
     private ListPreference mCarbonGestureLeft;
     private ListPreference mCarbonGestureUp;
     private ListPreference mCarbonGestureDown;
+
+    private SwitchPreference mEnabledPref;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -96,6 +100,11 @@ public class GestureSettings extends SettingsPreferenceFragment implements
         } else {
             mCarbonGestureDown.setSummary(mCarbonGestureDown.getEntry());
         }
+
+        mEnabledPref = (SwitchPreference) findPreference(KEY_ENABLED);
+        mEnabledPref.setChecked((Settings.System.getInt(getContentResolver(),
+                Settings.System.GESTURE_ANYWHERE_ENABLED, 0) == 1));
+        mEnabledPref.setOnPreferenceChangeListener(this);
 
     }
 
@@ -193,6 +202,11 @@ public class GestureSettings extends SettingsPreferenceFragment implements
                 mCarbonGestureDown.setSummary(
                         mCarbonGestureDown.getEntries()[index]);
             }
+            return true;
+        } else  if (preference == mEnabledPref) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.GESTURE_ANYWHERE_ENABLED,
+                    ((Boolean) newValue).booleanValue() ? 1 : 0);
             return true;
         }
         return false;
