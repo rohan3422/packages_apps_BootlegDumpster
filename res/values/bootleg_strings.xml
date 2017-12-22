@@ -224,6 +224,7 @@
     <string name="dialog_pick_iconpack_title">Pick icon pack</string>
     <string name="default_iconpack_title">Default icons</string>
     <string name="aosp_recents_category">AOSP recents</string>
+    <string name="bottom_nav_navigation_title">Navigation</string>
     <string name="show_clear_all_recents_button_title">Clear all button</string>
     <string name="show_clear_all_recents_button_summary">Show clear all button</string>
     <string name="recents_clear_all_location_title">Clear all location</string>
@@ -353,6 +354,7 @@
     <string name="pulse_solid_units_opacity">Solid lines opacity</string>
     <string name="pulse_solid_dimen_category">Solid lines mode settings</string>
     <string name="pulse_custom_buttons_opacity_title">Smartbar buttons opacity on Pulse</string>
+    <string name="navigationbar_title">Navbar features</string>
 
     <!-- Pulse config -->
     <string name="pulse_custom_dimen">Bar width</string>
