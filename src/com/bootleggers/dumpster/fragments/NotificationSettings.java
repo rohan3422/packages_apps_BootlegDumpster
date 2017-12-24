@@ -34,7 +34,6 @@ public class NotificationSettings extends SettingsPreferenceFragment implements
     private Preference mChargingLeds;
     private SystemSettingSwitchPreference mLowBatteryBlinking;
     private ListPreference mTickerMode;
-    private ListPreference mLogoStyle;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -69,14 +68,6 @@ public class NotificationSettings extends SettingsPreferenceFragment implements
                 1, UserHandle.USER_CURRENT);
         mTickerMode.setValue(String.valueOf(tickerMode));
         mTickerMode.setSummary(mTickerMode.getEntry());
-
-        mLogoStyle = (ListPreference) findPreference("status_bar_logo_style");
-        mLogoStyle.setOnPreferenceChangeListener(this);
-        int logoStyle = Settings.System.getIntForUser(getContentResolver(),
-                Settings.System.STATUS_BAR_LOGO_STYLE,
-                0, UserHandle.USER_CURRENT);
-        mLogoStyle.setValue(String.valueOf(logoStyle));
-        mLogoStyle.setSummary(mLogoStyle.getEntry());
     }
     
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -89,16 +80,7 @@ public class NotificationSettings extends SettingsPreferenceFragment implements
             mTickerMode.setSummary(
                     mTickerMode.getEntries()[index]);
             return true;
-        } else if (preference.equals(mLogoStyle)) {
-            int logoStyle = Integer.parseInt(((String) newValue).toString());
-            Settings.System.putIntForUser(getContentResolver(),
-                    Settings.System.STATUS_BAR_LOGO_STYLE, logoStyle, UserHandle.USER_CURRENT);
-            int index = mLogoStyle.findIndexOfValue((String) newValue);
-            mLogoStyle.setSummary(
-                    mLogoStyle.getEntries()[index]);
-            return true;
         }
-
         return false;
     }
 
