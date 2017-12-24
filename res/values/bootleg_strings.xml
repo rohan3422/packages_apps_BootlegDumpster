@@ -185,7 +185,6 @@
     <string name="torch_power_button_gesture_lp">Long press power to toggle torch</string>
 
     <!-- Features Strings - StatusBar -->
-    <string name="double_tap_sleep_gesture_title">DT2S on Statusbar</string>
     <string name="network_traffic_title">Network traffic</string>
     <string name="network_traffic_state_title">Show net activity in statusbar</string>
     <string name="network_traffic_autohide_threshold_title">Net activity autohide threshold (KB/s)</string>
