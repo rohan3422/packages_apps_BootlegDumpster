@@ -21,7 +21,7 @@ import android.support.v7.preference.ListPreference;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 
-import com.bootleggers.dumpster.preferences.SystemSettingsStore
+import com.bootleggers.dumpster.preferences.SystemSettingsStore;
 
 public class SystemSettingListPreference extends ListPreference {
     private boolean mAutoSummary = false;
