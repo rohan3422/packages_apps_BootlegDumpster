@@ -58,7 +58,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     }
 
     @Override
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference.equals(mLogoStyle)) {
             int logoStyle = Integer.parseInt(((String) newValue).toString());
             Settings.System.putIntForUser(getContentResolver(),
