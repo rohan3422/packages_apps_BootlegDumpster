@@ -18,23 +18,15 @@
     android:title="@string/quicksettings_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <com.bootleggers.dumpster.preferences.SystemSettingSwitchPreference
-        android:key="status_bar_quick_qs_pulldown"
-        android:title="@string/status_bar_quick_qs_pulldown"
-        android:summary="@string/status_bar_quick_qs_pulldown_summary"
-        android:defaultValue="false" />
-
-    <com.bootleggers.dumpster.preferences.SystemSettingSwitchPreference
-        android:key="qs_footer_warnings"
-        android:title="@string/qs_footer_warnings_title"
-        android:summary="@string/qs_footer_warnings_summary"
-        android:defaultValue="true" />
+    <PreferenceCategory
+        android:key="quickset_uiandstuff"
+        android:title="@string/general_ui_tweaks_preference">
 
     <Preference
-            android:key="qs_rows_columns"
-            android:fragment="com.bootleggers.dumpster.external.QsRowsColumns"
-            android:title="@string/qs_rows_columns_title"
-            android:summary="@string/bootleg_external_summary"/>
+        android:key="qs_rows_columns"
+        android:fragment="com.bootleggers.dumpster.external.QsRowsColumns"
+        android:title="@string/qs_rows_columns_title"
+        android:summary="@string/bootleg_external_summary"/>
 
     <com.bootleggers.dumpster.preferences.SystemSettingSwitchPreference
         android:key="qs_tile_title_visibility"
@@ -48,10 +40,22 @@
         android:defaultValue="true"/>
 
     <com.bootleggers.dumpster.preferences.SystemSettingSwitchPreference
-        android:key="music_tile_title"
-        android:title="@string/qs_music_tile_track_optional_title"
-        android:summary="@string/qs_music_tile_track_optional_summary"
-        android:defaultValue="false"/>
+        android:key="qs_footer_warnings"
+        android:title="@string/qs_footer_warnings_title"
+        android:summary="@string/qs_footer_warnings_summary"
+        android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="quickset_gestures"
+        android:title="@string/general_gesturesmaybe_preference">
+
+    <com.bootleggers.dumpster.preferences.SystemSettingSwitchPreference
+        android:key="status_bar_quick_qs_pulldown"
+        android:title="@string/status_bar_quick_qs_pulldown"
+        android:summary="@string/status_bar_quick_qs_pulldown_summary"
+        android:defaultValue="false" />
 
     <com.bootleggers.dumpster.preferences.SystemSettingSwitchPreference
         android:key="qs_quickbar_scroll_enabled"
@@ -59,10 +63,13 @@
         android:summary="@string/qqs_scroll_summary"
         android:defaultValue="false"/>
 
-        <Preference
-             android:key="qs_omnijaws"
-             android:fragment="com.bootleggers.dumpster.external.OmniJawsSettings"
-             android:title="@string/weather_title" />
+    <com.bootleggers.dumpster.preferences.SystemSettingSwitchPreference
+        android:key="music_tile_title"
+        android:title="@string/qs_music_tile_track_optional_title"
+        android:summary="@string/qs_music_tile_track_optional_summary"
+        android:defaultValue="false"/>
+
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="category_custom_header"
@@ -109,4 +116,16 @@
             android:dependency="status_bar_custom_header" />
 
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="quickset_random_misc"
+        android:title="@string/misc_title">
+
+    <Preference
+        android:key="qs_omnijaws"
+        android:fragment="com.bootleggers.dumpster.external.OmniJawsSettings"
+        android:title="@string/weather_title" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

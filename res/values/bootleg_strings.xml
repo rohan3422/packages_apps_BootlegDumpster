@@ -58,7 +58,12 @@
     <string name="obviousum02">And the title explains it all</string>
     <string name="obviousum03">Welp, i shouldn\'t explain it</string>
     <string name="bootleg_external_summary">Customize it more on this submenu</string>
+    <!-- General Categories -->
     <string name="bootleg_advancedopt_title">Advanced options</string>
+    <string name="general_ui_tweaks_preference">UI and Tweaks</string>
+    <string name="general_system_stuff_preference">System Behaviour</string>
+    <string name="general_random_preference">System Behaviour</string>
+    <string name="general_gesturesmaybe_preference">Gestures</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
@@ -80,6 +85,8 @@
     <!-- Volume rocker wake -->
     <string name="volume_rocker_wake_title">Volume rocker wake</string>
     <string name="volume_rocker_wake_summary">Pressing the volume keys will wake your device</string>
+    <!-- Categories -->
+    <string name="hwbuttons_volume_keys_pref">Volume Keys</string>
 
     <!-- Features Strings - Lockscreen -->
     <string name="double_tap_sleep_lockscreen">DT2S on lockscreen</string>
@@ -144,7 +151,7 @@
     <string name="style_enabled_summary">Custom header image is ON</string>
     <string name="style_disabled_summary">Custom header image is OFF</string>
     <string name="header_provider_disabled">Disabled</string>
-    <string name="custom_header_title">Custom header image</string>
+    <string name="custom_header_title">Header Image</string>
     <!-- Small quick settings scroller -->
     <string name="qqs_scroll_title">Scroll small QS tiles</string>
     <string name="qqs_scroll_summary">Allow scrolling through the small QS tiles</string>
@@ -176,6 +183,9 @@
     <string name="vibration_on_charge_state_changed_title">Vibrate on plug</string>
     <string name="vibration_on_charge_state_changed_summary">Vibrate when connecting or disconnecting a power source</string>
     <string name="app_ops_settings">AppOps</string>
+    <!-- Categories -->
+    <string name="misc_app_related_preference">Apps Related</string>
+    <string name="battery_savecolor_opt">Battery Saving Color</string>
 
     <!-- Features Strings - Gestures -->
     <string name="torch_title">Torch</string>
@@ -183,6 +193,8 @@
     <string name="torch_power_button_gesture_none">Disabled</string>
     <string name="torch_power_button_gesture_dt">Double tap power to toggle torch (will add a small delay to single tap)</string>
     <string name="torch_power_button_gesture_lp">Long press power to toggle torch</string>
+    <!-- Categories -->
+    <string name="gestures_flashlight_preference">Flashlight</string>
 
     <!-- Features Strings - StatusBar -->
     <string name="network_traffic_title">Network traffic</string>
@@ -240,6 +252,10 @@
     <string name="status_bar_logo_title">Bootleg logo</string>
     <string name="status_bar_logo_summary">Enable to show Bootleg logo on statusbar</string>
     <string name="status_bar_logo_style_title">Bootleg logo style</string>
+    <!-- Categories -->
+    <string name="light_category_preference">LED Lights</string>
+    <string name="statusbar_headsup_pref">Heads Up</string>
+    <string name="statusbar_oldticker_pref">Heads Up</string>
 
     <!-- Features Strings - Power Menu -->
     <string name="powermenu_optitle">Select Options</string>
@@ -254,6 +270,8 @@
     <string name="powermenu_lockdown">Lock Down</string>
     <string name="powermenu_soundpanel">Sound Panel</string>
     <string name="powermenu_users">Users</string>
+    <!-- Categories -->
+    <string name="powermenu_items_pref">Items</string>
 
     <!-- Features Strings - Recents -->
     <string name="recent_settings_title">Recents</string>

@@ -20,7 +20,7 @@
 
     <PreferenceCategory
         android:key="light_category"
-        android:title="@string/light_category">
+        android:title="@string/light_category_preference">
 
     <com.bootleggers.dumpster.preferences.SystemSettingSwitchPreference
         android:key="battery_light_enabled"
@@ -40,29 +40,34 @@
         android:defaultValue="false" />
 
     <Preference
-                android:key="charging_light"
-                android:fragment="com.bootleggers.dumpster.external.LedSettings"
-                android:title="@string/battery_light_settings"
-                android:summary="@string/battery_light_settings_summary"
-                android:dependency="battery_light_enabled"/>
-        <Preference
-             android:key="battery_charging_light"
-             android:fragment="com.bootleggers.dumpster.external.LedSettings"
-             android:title="@string/battery_light_settings"
-             android:dependency="battery_light_enabled"/>
+        android:key="charging_light"
+        android:fragment="com.bootleggers.dumpster.external.LedSettings"
+        android:title="@string/battery_light_settings"
+        android:summary="@string/battery_light_settings_summary"
+        android:dependency="battery_light_enabled"/>
     <Preference
-            android:key="notification_light"
-            android:fragment="com.android.settings.applications.NotificationApps"
-            android:title="@string/notification_light_settings" 
-            android:dependency="battery_light_enabled"/>
+        android:key="battery_charging_light"
+        android:fragment="com.bootleggers.dumpster.external.LedSettings"
+        android:title="@string/battery_light_settings"
+        android:dependency="battery_light_enabled"/>
+    <Preference
+        android:key="notification_light"
+        android:fragment="com.android.settings.applications.NotificationApps"
+        android:title="@string/notification_light_settings" 
+        android:dependency="battery_light_enabled"/>
+
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="statusbar_headsup_preference"
+        android:title="@string/statusbar_headsup_pref">
+    
     <com.bootleggers.dumpster.preferences.GlobalSettingSwitchPreference
-            android:key="heads_up_notifications_enabled"
-            android:title="@string/heads_up_notifications"
-            android:summaryOn="@string/summary_heads_up_enabled"
-            android:summaryOff="@string/summary_heads_up_disabled"
-            android:defaultValue="false" />
+        android:key="heads_up_notifications_enabled"
+        android:title="@string/heads_up_notifications"
+        android:summaryOn="@string/summary_heads_up_enabled"
+        android:summaryOff="@string/summary_heads_up_disabled"
+        android:defaultValue="true" />
 
     <Preference
         android:key="heads_up_notifications"
@@ -70,7 +75,13 @@
         android:summary="@string/bootleg_external_summary"
         android:fragment="com.bootleggers.dumpster.external.HeadsUpSettings"
         android:dependency="heads_up_notifications_enabled" />
-        
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="statusbar_oldticker_preference"
+        android:title="@string/statusbar_oldticker_pref">
+
     <ListPreference
         android:key="ticker_mode"
         android:entries="@array/ticker_mode_entries"
@@ -78,16 +89,5 @@
         android:summary="%s"
         android:title="@string/ticker_mode_title" />
 
-    <com.bootleggers.dumpster.preferences.SystemSettingSwitchPreference
-        android:key="status_bar_logo"
-        android:title="@string/status_bar_logo_title"
-        android:summary="@string/status_bar_logo_summary"
-        android:defaultValue="false"/>
-
-    <ListPreference
-        android:key="status_bar_logo_style"
-        android:entries="@array/status_bar_logo_style_entries"
-        android:entryValues="@array/status_bar_logo_style_values"
-        android:summary="%s"
-        android:title="@string/status_bar_logo_style_title" />
+    </PreferenceCategory>
 </PreferenceScreen>

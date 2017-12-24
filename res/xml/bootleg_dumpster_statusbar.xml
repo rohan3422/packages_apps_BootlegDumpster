@@ -18,6 +18,10 @@
     android:title="@string/statusbar_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <PreferenceCategory
+        android:key="statusbar_custom_uitweaks"
+        android:title="@string/general_ui_tweaks_preference">
+
     <Preference
         android:key="network_traffic"
         android:title="@string/network_traffic_title"
@@ -25,10 +29,26 @@
         android:fragment="com.bootleggers.dumpster.external.NetworkTraffic" />
 
     <Preference
-            android:title="@string/statusbar_items_title"
-            android:summary="@string/statusbar_items_summary" >
-            <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.android.systemui"
-                android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
+        android:title="@string/statusbar_items_title"
+        android:summary="@string/statusbar_items_summary" >
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.android.systemui"
+            android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
     </Preference>
+
+    <com.bootleggers.dumpster.preferences.SystemSettingSwitchPreference
+        android:key="status_bar_logo"
+        android:title="@string/status_bar_logo_title"
+        android:summary="@string/status_bar_logo_summary"
+        android:defaultValue="false"/>
+
+    <ListPreference
+        android:key="status_bar_logo_style"
+        android:entries="@array/status_bar_logo_style_entries"
+        android:entryValues="@array/status_bar_logo_style_values"
+        android:summary="%s"
+        android:title="@string/status_bar_logo_style_title" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
