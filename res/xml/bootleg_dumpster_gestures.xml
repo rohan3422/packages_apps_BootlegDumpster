@@ -18,4 +18,40 @@
     android:title="@string/gestures_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <PreferenceCategory
+        android:title="@string/carbon_gesture_preference_title"
+        android:key="gestures_carbon_category">
+
+         <com.bootleggers.dumpster.preferences.CustomSeekBarPreference
+             android:key="carbon_gestures_fingers"
+             android:title="@string/carbon_gestures_fingers_title"
+             android:max="4"
+             settings:min="2" />
+         <ListPreference
+             android:key="carbon_gestures_right"
+             android:entries="@array/carbon_gestures_button_entries"
+             android:entryValues="@array/carbon_gestures_button_values"
+             android:summary="%s"
+             android:title="@string/carbon_gestures_right_title" />
+         <ListPreference
+             android:key="carbon_gestures_left"
+             android:entries="@array/carbon_gestures_button_entries"
+             android:entryValues="@array/carbon_gestures_button_values"
+             android:summary="%s"
+             android:title="@string/carbon_gestures_left_title" />
+         <ListPreference
+             android:key="carbon_gestures_up"
+             android:entries="@array/carbon_gestures_button_entries"
+             android:entryValues="@array/carbon_gestures_button_values"
+             android:summary="%s"
+             android:title="@string/carbon_gestures_up_title" />
+         <ListPreference
+             android:key="carbon_gestures_down"
+             android:entries="@array/carbon_gestures_button_entries"
+             android:entryValues="@array/carbon_gestures_button_values"
+             android:summary="%s"
+             android:title="@string/carbon_gestures_down_title" />
+
+     </PreferenceCategory>
+
 </PreferenceScreen>
