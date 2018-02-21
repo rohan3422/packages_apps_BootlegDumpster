@@ -691,5 +691,9 @@
     <string name="battery_percent_outside">Show near icon</string>
     <string name="battery_percent_inside">Show inside icon</string>
 
+    <!-- Ambient Detection -->
+    <string name="ambient_song_detection_title">Ambient Display Song Detection</string>
+    <string name="ambient_song_detection_summary">When music isn\'t playing, allow to detect a song that\'s being played around you</string>
+
 </resources>
 

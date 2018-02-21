@@ -68,6 +68,12 @@
         android:dependency="lockscreen_visualizer"
         android:defaultValue="false"/>
 
+    <com.bootleggers.dumpster.preferences.SystemSettingSwitchPreference
+        android:key="ambient_ticker_detection"
+        android:title="@string/ambient_song_detection_title"
+        android:summary="@string/ambient_song_detection_summary"
+        android:defaultValue="false"/>
+
     </PreferenceCategory>
 
 
