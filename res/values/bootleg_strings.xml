@@ -1059,4 +1059,32 @@
     <string name="slim_blacklist_add_apps_summary">Tap here to add, tap on added app to remove it</string>
     <string name="slim_recents_hints_footer">To clear all apps, pinch-in with two fingers on the panel. To block an app from being cleared, long press on its icon to star it.\n\nFor additional recents features such as multiwindow or to kill an app, long press or drag an app card in the panel.</string>
 
+    <!-- Hide Lockscreen clock, date, & alarm -->
+    <string name="lockui_hideitems">Hide Lockscreen Items</string>
+    <string name="hide_lockscreen_clock_title">Clock widget</string>
+    <string name="hide_lockscreen_clock_summary">Change the clock widget\'s visibility</string>
+    <string name="hide_lockscreen_date_title">Date widget</string>
+    <string name="hide_lockscreen_date_summary">Change the date\'s visibility underneath the clock widget</string>
+    <string name="hide_lockscreen_alarm_title">Alarm text</string>
+    <string name="hide_lockscreen_alarm_summary">Change the alarm text\'s visibility underneath the clock widget</string>
+
+    <!-- Lockscreen styles -->
+    <string name="lockui_lockstyles">Clock and Date styles</string>
+    <string name="lockscreen_clock_selection_title">Clock style</string>
+    <string name="lockscreen_clock_selection_digital">Default</string>
+    <string name="lockscreen_clock_selection_digital_bold">Digital (bold)</string>
+    <string name="lockscreen_clock_selection_analog">Analog</string>
+    <string name="lockscreen_clock_selection_analog_deadpool">Analog (deadpool)</string>
+    <string name="lockscreen_clock_selection_sammy">Sammy</string>
+    <string name="lockscreen_clock_selection_sammy_bold">Sammy (bold)</string>
+    <string name="lockscreen_clock_selection_shishu">Shishu01</string>
+    <string name="lockscreen_date_selection_title">Date style</string>
+    <string name="lockscreen_date_selection_default">Default</string>
+    <string name="lockscreen_date_selection_str_box">Semi-transparent box</string>
+    <string name="lockscreen_date_selection_str_round">Semi-transparent box (round)</string>
+
+    <!-- Notification count -->
+    <string name="status_bar_notif_count_title">Show notification count</string>
+    <string name="status_bar_notif_count_summary">Display the number of pending notifications</string>
+
 </resources>
