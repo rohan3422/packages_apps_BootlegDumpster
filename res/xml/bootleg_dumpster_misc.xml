@@ -98,6 +98,12 @@
         android:entryValues="@array/listview_interpolator_values"
         android:defaultValue="0" />
 
+    <com.bootleggers.dumpster.preferences.GlobalSettingSwitchPreference
+        android:key="system_default_animation"
+        android:title="@string/system_default_animation_title"
+        android:summary="@string/system_default_animation_summary"
+        android:defaultValue="false" />
+
     <Preference
         android:key="gesture_anywhere"
         android:title="@string/gesture_anywhere_title"
