@@ -37,9 +37,11 @@ public class AnimationSettings extends SettingsPreferenceFragment implements
 
     private static final String KEY_LISTVIEW_ANIMATION = "listview_animation";
     private static final String KEY_LISTVIEW_INTERPOLATOR = "listview_interpolator";
+    private static final String KEY_SCREEN_OFF_ANIMATION = "screen_off_animation";
     
     private ListPreference mListViewAnimation;
     private ListPreference mListViewInterpolator;
+    private ListPreference mScreenOffAnimation;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -64,11 +66,18 @@ public class AnimationSettings extends SettingsPreferenceFragment implements
     mListViewInterpolator.setOnPreferenceChangeListener(this);
     mListViewInterpolator.setEnabled(listviewanimation > 0);    
 
+    // Screen off animations
+    mScreenOffAnimation = (ListPreference) findPreference(KEY_SCREEN_OFF_ANIMATION);
+    int screenOffAnimation = Settings.Global.getInt(getContentResolver(),
+            Settings.Global.SCREEN_OFF_ANIMATION, 0);
+    mScreenOffAnimation.setValue(Integer.toString(screenOffAnimation));
+    mScreenOffAnimation.setSummary(mScreenOffAnimation.getEntry());
+    mScreenOffAnimation.setOnPreferenceChangeListener(this);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-    if (preference == mListViewAnimation) {
+        if (preference == mListViewAnimation) {
             int value = Integer.parseInt((String) newValue);
             int index = mListViewAnimation.findIndexOfValue((String) newValue);
             Settings.System.putInt(getContentResolver(),
@@ -83,8 +92,14 @@ public class AnimationSettings extends SettingsPreferenceFragment implements
                     Settings.System.LISTVIEW_INTERPOLATOR, value);
             mListViewInterpolator.setSummary(mListViewInterpolator.getEntries()[index]);           
             return true;
+        } else if (preference == mScreenOffAnimation) {
+            int value = Integer.valueOf((String) newValue);
+            int index = mScreenOffAnimation.findIndexOfValue((String) newValue);
+            mScreenOffAnimation.setSummary(mScreenOffAnimation.getEntries()[index]);
+            Settings.Global.putInt(getContentResolver(), Settings.Global.SCREEN_OFF_ANIMATION, value);
+            return true;
         }
-    return false;
+        return false;
     }
     @Override
     public int getMetricsCategory() {
