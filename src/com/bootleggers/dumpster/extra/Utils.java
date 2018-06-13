@@ -77,7 +77,7 @@ public final class Utils {
     private static final int MY_USER_ID = UserHandle.myUserId();
 
     // Used for making the Fingerprint check
-    private FingerprintManager mFingerprintManager;
+    private static FingerprintManager mFingerprintManager;
 
     /**
      * Returns whether the device is voice-capable (meaning, it is also a phone).
@@ -303,7 +303,7 @@ public final class Utils {
     }
 
     public static boolean isDeviceWithFP(Activity activity) {
-        mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
+        mFingerprintManager = (FingerprintManager) activity.getSystemService(Context.FINGERPRINT_SERVICE);
         if (mFingerprintManager != null && mFingerprintManager.isHardwareDetected()) {
             return true;
         } else {

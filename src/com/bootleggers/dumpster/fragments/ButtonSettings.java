@@ -57,6 +57,8 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
 
     private ListPreference mTorchPowerButton;
     private ListPreference mVolumeKeyCursorControl;
+    private PreferenceCategory mButtonFlashLightCategory;
+    private PreferenceCategory mHardwareExtra;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -65,6 +67,13 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
 
         final PreferenceScreen prefScreen = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
+
+        // load categories and init/remove preferences based on device
+        // configuration
+        mButtonFlashLightCategory = (PreferenceCategory) findPreference("power_button");
+        mHardwareExtra = (PreferenceCategory) findPreference("hw_fpandmore");
+        final Preference hwKeysSubmenu = (Preference) prefScreen
+                .findPreference(SUBMENU_HWKEYS);
 
         // volume key cursor control
         mVolumeKeyCursorControl = (ListPreference) findPreference(VOLUME_KEY_CURSOR_CONTROL);
@@ -77,7 +86,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         }
 
         if (!Utils.deviceSupportsFlashLight(getContext())) {
-            Preference toRemove = prefScreen.findPreference(TORCH_POWER_BUTTON_GESTURE);
+            PreferenceCategory toRemove = prefScreen.findPreference("power_button");
             if (toRemove != null) {
                 prefScreen.removePreference(toRemove);
             }
@@ -100,13 +109,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         final boolean hasMenuKey = (deviceKeys & KEY_MASK_MENU) != 0;
         final boolean hasAssistKey = (deviceKeys & KEY_MASK_ASSIST) != 0;
         final boolean hasAppSwitchKey = (deviceKeys & KEY_MASK_APP_SWITCH) != 0;
-
-        // load categories and init/remove preferences based on device
-        // configuration
-        mButtonFlashLightCategory = (PreferenceCategory) findPreference("power_button");
-        mHardwareExtra = (PreferenceCategory) findPreference("hw_fpandmore");
-        final Preference hwKeysSubmenu = (Preference) prefScreen
-                .findPreference(SUBMENU_HWKEYS);
 
         // remove this feature on non-hw phones
         if (!hasBackKey && !hasHomeKey && !hasAppSwitchKey && !hasMenuKey && !hasAssistKey) {
