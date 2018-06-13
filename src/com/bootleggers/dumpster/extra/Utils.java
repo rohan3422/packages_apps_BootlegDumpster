@@ -57,6 +57,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
+import com.android.internal.widget.LockPatternUtils;
 import com.android.settings.R;
 
 public final class Utils {
@@ -69,6 +70,9 @@ public final class Utils {
 
     // Device type reference
     private static int sDeviceType = -1;
+
+    // Returns the User ID of the account that's being used
+    private static final int MY_USER_ID = UserHandle.myUserId();
 
     /**
      * Returns whether the device is voice-capable (meaning, it is also a phone).
@@ -274,6 +278,16 @@ public final class Utils {
     }
 
     public static boolean isAndroidGoFlagEnabled() {
+        String isGoFlag = SystemProperties.get("ro.config.low_ram","false");
+        if (isGoFlag.equalsIgnoreCase(true)) {
+            return true;
+        } else {
+            return false;
+        }
+        
+    }
+
+    public static boolean isLockSecured() {
         String isGoFlag = SystemProperties.get("ro.config.low_ram","false");
         if (isGoFlag.equalsIgnoreCase(true)) {
             return true;
