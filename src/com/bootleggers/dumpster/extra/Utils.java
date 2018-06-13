@@ -38,6 +38,7 @@ import android.os.SystemProperties;
 import android.net.ConnectivityManager;
 import android.os.AsyncTask;
 import android.os.UserManager;
+import android.os.UserHandle;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
@@ -279,7 +280,7 @@ public final class Utils {
 
     public static boolean isAndroidGoFlagEnabled() {
         String isGoFlag = SystemProperties.get("ro.config.low_ram","false");
-        if (isGoFlag.equalsIgnoreCase(true)) {
+        if (isGoFlag.equalsIgnoreCase("true")) {
             return true;
         } else {
             return false;
@@ -287,9 +288,9 @@ public final class Utils {
         
     }
 
-    public static boolean isLockSecured() {
-        String isGoFlag = SystemProperties.get("ro.config.low_ram","false");
-        if (isGoFlag.equalsIgnoreCase(true)) {
+    public static boolean isLockSecured(Activity activity) {
+        final LockPatternUtils lockPatternUtils = new LockPatternUtils(activity);
+        if (lockPatternUtils.isSecure(MY_USER_ID)) {
             return true;
         } else {
             return false;
@@ -320,9 +321,9 @@ public final class Utils {
 
         @Override
         protected Void doInBackground(Void... params) {
-        	try {
-        	     Thread.sleep(3000); //3s
-        	} catch (InterruptedException ie) {}
+            try {
+                 Thread.sleep(3000); //3s
+            } catch (InterruptedException ie) {}
 
             try {
                 ActivityManager am =
