@@ -242,7 +242,7 @@ public class LogIt extends SettingsPreferenceFragment
     public void logItDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle(R.string.log_it_dialog_title);
-        if (String.valueOf(bootlegBuildtype) == "Shishufied") {
+        if (bootlegBuildtype.equalsIgnoreCase("Shishufied")) {
             builder.setMessage(R.string.logcat_warning);
         } else {
             builder.setMessage(R.string.logcat_warning_unofficial);
@@ -266,7 +266,7 @@ public class LogIt extends SettingsPreferenceFragment
     public void logZipDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle(R.string.log_it_dialog_title);
-        if (String.valueOf(bootlegBuildtype) == "Shishufied") {
+        if (bootlegBuildtype.equalsIgnoreCase("Shishufied")) {
             builder.setMessage(R.string.logcat_warning);
         } else {
             builder.setMessage(R.string.logcat_warning_unofficial);
