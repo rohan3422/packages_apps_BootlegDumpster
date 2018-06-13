@@ -66,11 +66,16 @@ public class LockscreenUI extends SettingsPreferenceFragment implements
         mLockClockFonts.setSummary(mLockClockFonts.getEntry());
         mLockClockFonts.setOnPreferenceChangeListener(this);
 
-        mLsSecurityAlpha = (CustomSeekBarPreference) findPreference(LOCKSCREEN_SECURITY_ALPHA);
-        float alpha2 = Settings.System.getFloat(resolver,
-                Settings.System.LOCKSCREEN_SECURITY_ALPHA, 0.75f);
-        mLsSecurityAlpha.setValue((int)(100 * alpha2));
-        mLsSecurityAlpha.setOnPreferenceChangeListener(this);
+        if (Utils.isLockSecured(getActivity())) {
+            mLsSecurityAlpha = (CustomSeekBarPreference) findPreference(LOCKSCREEN_SECURITY_ALPHA);
+            float alpha2 = Settings.System.getFloat(resolver,
+                    Settings.System.LOCKSCREEN_SECURITY_ALPHA, 0.75f);
+            mLsSecurityAlpha.setValue((int)(100 * alpha2));
+            mLsSecurityAlpha.setOnPreferenceChangeListener(this);
+        } else {
+            mLsSecurityAlpha = (CustomSeekBarPreference) findPreference(LOCKSCREEN_SECURITY_ALPHA);
+            mLsSecurityAlpha.setEnabled(false);
+        }
 
         mLsAlpha = (CustomSeekBarPreference) findPreference(LOCKSCREEN_ALPHA);
         float alpha = Settings.System.getFloat(resolver,
