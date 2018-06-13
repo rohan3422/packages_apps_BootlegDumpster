@@ -90,6 +90,7 @@ public class AnimationSettings extends SettingsPreferenceFragment implements
         mFooterPreferenceMixin.createFooterPreference().setTitle(R.string.animations_transparent_alert);
         final PreferenceScreen prefSet = getPreferenceScreen();
         mContentRes = getActivity().getContentResolver();
+        mContext = (Context) getActivity();
 
     //Listview Animations
     mListViewAnimation = (ListPreference) findPreference(KEY_LISTVIEW_ANIMATION);
