@@ -32,6 +32,7 @@ import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.support.v14.preference.SwitchPreference;
 import android.provider.Settings;
 import com.android.internal.util.gzosp.GzospUtils;
+import com.bootleggers.dumpster.extra.Utils;
 
 import com.android.settings.R;
 
@@ -75,7 +76,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
            mVolumeKeyCursorControl.setSummary(mVolumeKeyCursorControl.getEntry());
         }
 
-        if (!GzospUtils.deviceHasFlashlight(getContext())) {
+        if (!Utils.deviceSupportsFlashLight(getContext())) {
             Preference toRemove = prefScreen.findPreference(TORCH_POWER_BUTTON_GESTURE);
             if (toRemove != null) {
                 prefScreen.removePreference(toRemove);
@@ -102,12 +103,14 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
 
         // load categories and init/remove preferences based on device
         // configuration
+        mButtonFlashLightCategory = (PreferenceCategory) findPreference("power_button");
+        mHardwareExtra = (PreferenceCategory) findPreference("hw_fpandmore");
         final Preference hwKeysSubmenu = (Preference) prefScreen
                 .findPreference(SUBMENU_HWKEYS);
 
         // remove this feature on non-hw phones
         if (!hasBackKey && !hasHomeKey && !hasAppSwitchKey && !hasMenuKey && !hasAssistKey) {
-            prefScreen.removePreference(hwKeysSubmenu);
+            mHardwareExtra.removePreference(hwKeysSubmenu);
         }
 
     }
