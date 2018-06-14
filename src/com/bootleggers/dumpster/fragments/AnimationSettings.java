@@ -202,13 +202,17 @@ public class AnimationSettings extends SettingsPreferenceFragment implements
     mScrollingCachePref.setOnPreferenceChangeListener(this);
 
         mScreenOffAnimation = (ListPreference) findPreference(KEY_SCREEN_OFF_ANIMATION);
-        int screenOffAnimation = Settings.Global.getInt(getContentResolver(),
-                Settings.Global.SCREEN_OFF_ANIMATION, 0);
-
-        mScreenOffAnimation.setValue(Integer.toString(screenOffAnimation));
-        mScreenOffAnimation.setSummary(mScreenOffAnimation.getEntry());
-        mScreenOffAnimation.setOnPreferenceChangeListener(this);
-
+        if (!Utils.isAndroidGoFlagEnabled()) {
+            int screenOffAnimation = Settings.Global.getInt(getContentResolver(),
+                    Settings.Global.SCREEN_OFF_ANIMATION, 0);
+    
+            mScreenOffAnimation.setValue(Integer.toString(screenOffAnimation));
+            mScreenOffAnimation.setSummary(mScreenOffAnimation.getEntry());
+            mScreenOffAnimation.setOnPreferenceChangeListener(this);
+        } else {
+            mScreenOffAnimation.setSummary(R.string.no_no_summary_go);
+            mScreenOffAnimation.setEnabled(false);
+        }
 }
 
     @Override
