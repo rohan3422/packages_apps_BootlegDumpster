@@ -24,6 +24,7 @@ import android.support.v7.preference.PreferenceScreen;
 import android.provider.Settings;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.bootleggers.dumpster.extra.Utils;
 import com.bootleggers.dumpster.preferences.CustomSeekBarPreference;
 
 import com.android.settings.SettingsPreferenceFragment;

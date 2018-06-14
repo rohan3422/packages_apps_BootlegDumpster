@@ -34,6 +34,8 @@
         android:summary="@string/gesture_anywhere_summary"
         android:fragment="com.bootleggers.dumpster.gestureanywhere.GestureAnywhereSettings" />
 
+    </PreferenceCategory>
+
     <PreferenceCategory
         android:key="gest_misc"
         android:title="@string/misc_title">
