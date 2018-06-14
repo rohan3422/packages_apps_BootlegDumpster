@@ -34,6 +34,7 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.util.crdroid.AwesomeAnimationHelper;
+import com.bootleggers.dumpster.extra.Utils;
 
 public class AnimationSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
