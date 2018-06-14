@@ -191,9 +191,6 @@ public class QuickSettings extends SettingsPreferenceFragment implements
             Boolean headerEnabled = (Boolean) newValue;
             updateHeaderProviderSummary(headerEnabled);
             return true;
-        } else if (preference == mTilesTitle) {
-            Utils.restartSystemUi(getContext());
-            return true;
         }
         return false;
     }
@@ -204,6 +201,9 @@ public class QuickSettings extends SettingsPreferenceFragment implements
             Intent intent = new Intent(Intent.ACTION_PICK);
             intent.setType("image/*");
             startActivityForResult(intent, REQUEST_PICK_IMAGE);
+            return true;
+        } else if (preference == mTilesTitle) {
+            Utils.restartSystemUi(getContext());
             return true;
         }
         return super.onPreferenceTreeClick(preference);
