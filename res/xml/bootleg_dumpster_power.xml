@@ -78,6 +78,12 @@
             android:title="@string/powermenu_soundpanel"
             android:defaultValue="false" /> -->
 
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="pwermenu_misc"
+        android:title="@string/misc_title">
+
          <com.bootleggers.dumpster.preferences.SystemSettingSwitchPreference
             android:key="wallpaper_power_menu_tint"
             android:title="@string/wallpaper_tint_power_menu"
