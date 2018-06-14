@@ -98,7 +98,7 @@ public class LockscreenUI extends SettingsPreferenceFragment implements
                     getContentResolver(), Settings.System.LOCK_OWNER_FONTS, 8)));
             mLockOwnerFonts.setSummary(mLockOwnerFonts.getEntry());
             mLockOwnerFonts.setOnPreferenceChangeListener(this);
-        else {
+        } else {
             mLockOwnerFonts.setSummary(R.string.no_no_summary_owner);
             mLockOwnerFonts.setEnabled(false);
         }
