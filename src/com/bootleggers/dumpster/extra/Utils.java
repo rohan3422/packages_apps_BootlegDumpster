@@ -302,6 +302,16 @@ public final class Utils {
         
     }
 
+    public static boolean isLockOwnerInfo(Activity activity) {
+        final LockPatternUtils lockPatternUtils2 = new LockPatternUtils(activity);
+        if (!TextUtils.isEmpty(mLockPatternUtils.getOwnerInfo(MY_USER_ID))) {
+            return true;
+        } else {
+            return false;
+        }
+        
+    }
+
     public static boolean isDeviceWithFP(Activity activity) {
         mFingerprintManager = (FingerprintManager) activity.getSystemService(Context.FINGERPRINT_SERVICE);
         if (mFingerprintManager != null && mFingerprintManager.isHardwareDetected()) {
