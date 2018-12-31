@@ -68,6 +68,12 @@
         android:summary="@string/force_ambient_for_media_summary"
         android:defaultValue="true" />
 
+    <com.bootleggers.dumpster.preferences.SystemSettingSwitchPreference
+        android:key="ambient_recognition"
+        android:dependency="force_ambient_for_media"
+        android:title="@string/ambient_recognition_title"
+        android:defaultValue="false" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

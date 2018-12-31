@@ -827,6 +827,9 @@
     <string name="lockscreen_ambient_display_category">Ambient Display</string>
     <string name="force_ambient_for_media_title">Show music ticker</string>
     <string name="force_ambient_for_media_summary">Shows the music you\'re playing on your device on Ambient Display</string>
+    <string name="ambient_recognition_title">Show Now Playing</string>
+    <string name="ambient_recognition_summary">Shows the music that\'s sounding around you on Ambient Display</string>
+    
 
     <!-- Recents icon pack -->
     <string name="recents_icon_pack_title">Icon Pack</string>
