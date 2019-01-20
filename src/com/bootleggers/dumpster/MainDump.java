@@ -23,19 +23,30 @@ import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.os.SystemProperties;
+import android.support.v7.preference.Preference;
 import android.view.Surface;
-import android.preference.Preference;
 import com.android.settings.R;
 
 import com.android.settings.SettingsPreferenceFragment;
 
 public class MainDump extends SettingsPreferenceFragment {
 
+    // ShishuOTA
+    private static final String SHISHU_OTA = "bootleggers_update_settings";
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
         addPreferencesFromResource(R.xml.bootleg_dumpster);
+
+        String buildType = SystemProperties.get("ro.bootleggers.releasetype","Unshishufied");
+
+        Preference ShishuOta = findPreference(SHISHU_OTA);
+        if (buildType == "Unshishufied") {
+            getPreferenceScreen().removePreference(ShishuOta);
+        }
     }
 
     @Override

@@ -106,6 +106,14 @@
             android:fragment="com.bootleggers.dumpster.fragments.MiscSettings"
             android:icon="@drawable/ic_settings_miscs"/>
 
+        <Preference
+            android:key="bootleggers_update_settings"
+            android:title="@string/bootleggers_update_settings_title">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="@string/bootleggers_update_package"
+                android:targetClass="@string/bootleggers_update_activity" />
+        </Preference>
+
         <!-- About the ROM -->
         <Preference
             android:key="aboutbootleg_category"

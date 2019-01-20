@@ -1196,4 +1196,9 @@
     <string name="lockscreen_clock_selection_gradient_full">Full gradient clock</string>
     <string name="lockscreen_clock_selection_gradient_likeqs">Monochrome gradient clock</string>
 
+    <!-- ShishuOTA -->
+    <string name="bootleggers_update_settings_title">ShishuOTA</string>
+    <string name="bootleggers_update_package" translatable="false">com.bootleggers.shishuota</string>
+    <string name="bootleggers_update_activity" translatable="false">com.bootleggers.shishuota.UpdatesActivity</string>
+
 </resources>
