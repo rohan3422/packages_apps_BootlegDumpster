@@ -20,6 +20,19 @@
 
     <PreferenceCategory
          android:key="misc_overall_cat"
+         android:title="@string/gaming_mode_preference" >
+
+    <com.bootleggers.dumpster.preferences.SystemSettingMasterSwitchPreference
+        android:key="gaming_mode_enabled"
+        android:fragment="com.bootleggers.dumpster.fragments.GamingMode"
+        android:title="@string/gaming_mode_title"
+        android:summary="@string/gaming_mode_summary"
+        android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+         android:key="misc_overall_cat"
          android:title="@string/general_system_stuff_preference" >
 
     <com.bootleggers.dumpster.preferences.GlobalSettingSwitchPreference
@@ -96,13 +109,6 @@
     <PreferenceCategory
         android:key="misc_settings_related"
         android:title="@string/misc_settings_cat_title">
-
-    <com.bootleggers.dumpster.preferences.SystemSettingSwitchPreference
-        android:key="gaming_mode_enabled"
-        android:fragment="com.havoc.settings.fragments.GamingMode"
-        android:title="@string/gaming_mode_title"
-        android:summary="@string/gaming_mode_summary"
-        android:defaultValue="false" />
 
     <com.bootleggers.dumpster.preferences.SystemSettingSwitchPreference
         android:key="enable_conditions"
